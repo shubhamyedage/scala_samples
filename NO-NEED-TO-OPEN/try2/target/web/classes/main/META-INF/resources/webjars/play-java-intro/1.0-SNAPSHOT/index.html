@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+</head>
+<body>
+
+
+<h1>Welcome</h1>
+
+<div id="id01"></div>
+
+<!--=====================================================================-->
+<!--myFunction([-->
+<!--{-->
+<!--"person": "Shubham"-->
+<!--},-->
+<!--{-->
+<!--"person": "Pravin"-->
+<!--}-->
+<!--]);-->
+<!--=====================================================================-->
+
+<script>
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i<arr.length; i++) {
+        out += '<h4>' + arr[i].person + '</h4>';
+    }
+    document.getElementById("id01").innerHTML = out;
+}
+</script>
+<script type='text/javascript' src='http://localhost:9000/person/data'></script>
+<!--=====================================================================-->
+<form action="/person" method="POST">
+    <input type="text" name="id"/>
+    <input type="text" name="name"/>
+    <input type="submit" name="SubmitPerson" value="ADD" onclick="addPerson"/>
+    <input type="submit" name="SubmitPerson" value="UPDATE" onclick="pdatePerson"/>
+    <input type="submit" name="SubmitPerson" value="REMOVE" onclick="removePerson"/>
+</form>
+</body>
+</html>

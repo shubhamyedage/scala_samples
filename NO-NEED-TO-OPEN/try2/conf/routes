@@ -1,0 +1,29 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+
+GET     /person controllers.Assets.at(path="/public", file="index.html")
+GET     /person/data    controllers.Assets.at(path="/public", file="person.js")
+GET     /person     controllers.Application.index
+POST    /person    controllers.Application.addPerson()
+DELETE  /person/:id    controllers.Application.removePerson(id)
+PUT    /person/:id&:name   controllers.Application.updatePerson(id,name)
+
+
+
+#GET     /call            controllers.Application.index()
+
+#GET     /route1/:name      controllers.Application.echoData(name)
+#GET     /echo      controllers.Application.echoData1(name)
+
+
+#GET     /login           controllers.Application.login()
+#GET     /logout          controllers.Application.logout
+#GET     /endSession     controllers.Application.endSession
+
+
+
+#GET    /save       controllers.Application.save()
+#GET     /remove     controllers.Application.remove()
